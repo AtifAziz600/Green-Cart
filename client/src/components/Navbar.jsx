@@ -67,17 +67,19 @@ const Navbar = () => {
             >
               <path
                 d="M.583.583h2.333l1.564 7.81a1.17 1.17 0 0 0 1.166.94h5.67a1.17 1.17 0 0 0 1.167-.94l.933-4.893H3.5m2.333 8.75a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0m6.417 0a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0"
-                stroke="#615fff"
+                stroke="#4fbf8f"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
-            <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full">
+            <button style={{ backgroundColor: "var(--color-primary)" }} className="absolute -top-2 -right-3 text-xs text-white w-[18px] h-[18px] rounded-full">
               3
             </button>
           </div>
 
-          <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
+          <button 
+          style={{ backgroundColor: "var(--color-primary)" }} 
+          className="cursor-pointer px-8 py-2 hover:brightness-90 transition text-white rounded-full">
             Login
           </button>
         </div>
@@ -136,14 +138,15 @@ const Navbar = () => {
                   setOpen(false);
                   setShowUserLogin(true);
                 }}
-                className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-primary transition text-white rounded-full text-sm"
+                style={{ backgroundColor: "var(--color-primary)" }}
+                className="cursor-pointer px-6 py-2 mt-2 hover:brightness-90 transition text-white rounded-full text-sm"
               >
                 Login
               </button>
             ) : (
               <button
                 onClick={logout}
-                className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-primary transition text-white rounded-full text-sm"
+                className="cursor-pointer px-6 py-2 mt-2 bg-color-primary hover:bg-color-primary-dull transition text-white rounded-full text-sm"
               >
                 Logout
               </button>
