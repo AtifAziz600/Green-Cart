@@ -72,16 +72,31 @@ const Navbar = () => {
                 stroke-linejoin="round"
               />
             </svg>
-            <button style={{ backgroundColor: "var(--color-primary)" }} className="absolute -top-2 -right-3 text-xs text-white w-[18px] h-[18px] rounded-full">
+            <button
+              style={{ backgroundColor: "var(--color-primary)" }}
+              className="absolute -top-2 -right-3 text-xs text-white w-[18px] h-[18px] rounded-full"
+            >
               3
             </button>
           </div>
 
-          <button 
-          style={{ backgroundColor: "var(--color-primary)" }} 
-          className="cursor-pointer px-8 py-2 hover:brightness-90 transition text-white rounded-full">
-            Login
-          </button>
+          {!user ? (
+            <button
+              onClick={() => setShowUserLogin(true)}
+              style={{ backgroundColor: "var(--color-primary)" }}
+              className="cursor-pointer px-8 py-2 hover:brightness-90 transition text-white rounded-full"
+            >
+              Login
+            </button>
+          ) : (
+            <div>
+              <img src={assets.profile_icon} className="w-10" alt="" />
+              <ul>
+                <li>My Order</li>
+                <li>Logout</li>
+              </ul>
+            </div>
+          )}
         </div>
 
         <button
