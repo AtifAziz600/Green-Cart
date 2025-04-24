@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
+// import profileIcon from "../assets/profile_icon.png";
 import { useAppContext } from "../context/AppContext";
 
 const Navbar = () => {
@@ -42,17 +43,17 @@ const Navbar = () => {
               <path
                 d="M10.836 10.615 15 14.695"
                 stroke="#7A7B7D"
-                stroke-width="1.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M9.141 11.738c2.729-1.136 4.001-4.224 2.841-6.898S7.67.921 4.942 2.057C2.211 3.193.94 6.281 2.1 8.955s4.312 3.92 7.041 2.783"
                 stroke="#7A7B7D"
-                stroke-width="1.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
@@ -68,8 +69,8 @@ const Navbar = () => {
               <path
                 d="M.583.583h2.333l1.564 7.81a1.17 1.17 0 0 0 1.166.94h5.67a1.17 1.17 0 0 0 1.167-.94l.933-4.893H3.5m2.333 8.75a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0m6.417 0a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0"
                 stroke="#4fbf8f"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <button
@@ -90,6 +91,7 @@ const Navbar = () => {
             </button>
           ) : (
             <div>
+              {console.log("Profile Icon Source:", assets.profile_icon)}
               <img src={assets.profile_icon} className="w-10" alt="" />
               <ul>
                 <li>My Order</li>
