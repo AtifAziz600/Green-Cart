@@ -5,7 +5,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true); // in here with the conditinal rendering method we can say that user is logged in or not same with the profile image backend
   const [isSeller, setIsSeller] = useState(false);
   const [showUserLogin, setShowUserLogin] = useState(false);
 
