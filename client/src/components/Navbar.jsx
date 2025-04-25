@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
-        <NavLink to='/' onClick={() => setOpen(false)}>
+        <NavLink to="/" onClick={() => setOpen(false)}>
           <img className="h-9" src={assets.logo} alt="logo" />
         </NavLink>
 
@@ -58,7 +58,10 @@ const Navbar = () => {
             </svg>
           </div>
 
-          <div onClick={() => navigate("/cart")} className="relative cursor-pointer">
+          <div
+            onClick={() => navigate("/cart")}
+            className="relative cursor-pointer"
+          >
             <img src={assets.cart_icon} alt="cart" className="w-6 opacity-80" />
             {/* <svg
               width="18"
@@ -94,8 +97,18 @@ const Navbar = () => {
             <div className="relative group">
               <img src={assets.profile_icon} className="w-10" alt="" />
               <ul className="hidden group-hover:block absolute top-10 right-0 bg-white shadow-border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40">
-                <li onClick={()=> navigate("my-orders")} className="p-1.5 pl-3 hover:bg-emerald-400 cursor-pointer">My Order</li>
-                <li onClick={logout} className="p-1.5 pl-3 hover:bg-emerald-400 cursor-pointer">Logout</li>
+                <li
+                  onClick={() => navigate("my-orders")}
+                  className="p-1.5 pl-3 hover:bg-emerald-400 cursor-pointer"
+                >
+                  My Order
+                </li>
+                <li
+                  onClick={logout}
+                  className="p-1.5 pl-3 hover:bg-emerald-400 cursor-pointer"
+                >
+                  Logout
+                </li>
               </ul>
             </div>
           )}
