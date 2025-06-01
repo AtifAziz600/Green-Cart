@@ -9,6 +9,15 @@ export const AppContextProvider = ({ children }) => {
   const [user, setUser] = useState(true); // in here with the conditinal rendering method we can say that user is logged in or not same with the profile image backend
   const [isSeller, setIsSeller] = useState(false);
   const [showUserLogin, setShowUserLogin] = useState(false);
+  const [products, setProducts] = useState([]);
+
+  const fetchProducts = async () => {
+    setProducts([]);
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, [])
 
   const value = {
     navigate,
@@ -18,6 +27,7 @@ export const AppContextProvider = ({ children }) => {
     setIsSeller,
     showUserLogin,
     setShowUserLogin,
+    products
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
