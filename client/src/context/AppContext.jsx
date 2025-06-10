@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
+
+  const currency = import.meta.VITE_CURRENCY;
   const navigate = useNavigate();
   const [user, setUser] = useState(true); // in here with the conditinal rendering method we can say that user is logged in or not same with the profile image backend
   const [isSeller, setIsSeller] = useState(false);
@@ -27,7 +29,8 @@ export const AppContextProvider = ({ children }) => {
     setIsSeller,
     showUserLogin,
     setShowUserLogin,
-    products
+    products,
+    currency
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
