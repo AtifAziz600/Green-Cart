@@ -106,5 +106,5 @@ const ProductCard = ({ product }) => {
     )
   );
 };
-// 1.30.52
+// 1.45.04
 export default ProductCard;
