@@ -42,6 +42,6 @@ const BottomBanner = () => {
   );
 };
 
-//2.02.31
+//2.08.52
 
 export default BottomBanner;
